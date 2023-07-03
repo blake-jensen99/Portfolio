@@ -20,10 +20,10 @@
     <!-- NAV -->
     <nav id="nav" class="d-flex justify-content-between align-items-center w-3">
         <div class="navL d-flex justify-content-center">
-            <p>BJ</p>
+            <p style="color: black;">BJ</p>
         </div>
-        <div class="navR d-flex  align-items-center">
-            <ul class="d-flex justify-content-center">
+        <div class="navR d-flex  align-items-center ">
+            <ul class="d-flex justify-content-center" id="Links">
                 <li class="link_border"><a href="#toppage">Home</a></li>
                 <li class="link_border"><a href="#about">About</a></li>
                 <li class="link_border"><a href="#projects">Projects</a></li>
@@ -37,8 +37,41 @@
                 </label>
                 <i class="fa-regular fa-moon fa-2xl"></i>
             </div>
+
         </div>
     </nav>
+    <div class="mobile mobNav" id="mobNav1">
+        <div class="collapse test" id="toggleNav" data-bs-theme="dark">
+            <div class="bg-dark p-4">
+                <ul class="d-flex justify-content-center" id="Links">
+                    <li><a href="#toppage">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar navbar-dark">
+            <div class="container-fluid justify-content-between">
+                <div class="navL d-flex justify-content-center">
+                    <p style="color: black;">BJ</p>
+                </div>
+                <div class="dark_toggle d-flex  align-items-center">
+                    <i class="fa-regular fa-sun fa-2xl"></i>
+                    <label class="switch">
+                        <input onclick="toggleDark()" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fa-regular fa-moon fa-2xl"></i>
+                </div>
+                <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- NAV -->
 
     <!-- MAIN -->
@@ -57,7 +90,7 @@
                 </div>
             </div>
             <div class="home_bottom py-2 px-5">
-                <p>Full-Time Software Development Student at Coding Dojo</p>
+                <p>Full-Time Software Developer</p>
             </div>
         </div>
     </div>
@@ -126,7 +159,7 @@
                             <p>Deconned contaminated tools and surfaces</p>
                             <p>Hung lead shielding over and around specific locations or pieces of equipment to lessen
                                 radiation</p>
-                            <p>Disposed of contaminated/radiating waste in accordance with industry guidelines and
+                            <p>Disposed of contaminated and/or radiating waste in accordance with industry guidelines and
                                 standards</p>
                         </div>
                         <div id="Midwest" class="vtabcontent2">
@@ -164,7 +197,7 @@
                         <button class="htablinks" onclick="openAct(event, 'Woodworking')"
                             id="defaultOpenh">Woodworking</button>
                         <button class="htablinks" onclick="openAct(event, 'Lifting')">Lifting</button>
-                        <button class="htablinks" onclick="openAct(event, 'Track')">Track and Field</button>
+                        <button class="htablinks" onclick="openAct(event, 'Track')">Track</button>
                         <button class="htablinks" onclick="openAct(event, 'Music')">Music</button>
                     </div>
                     <div id="Woodworking" class="htabcontent">
@@ -191,7 +224,7 @@
     <!-- PROJECTS -->
     <div id="projects" class="d-flex justify-content-center align-items-center">
         <div class="projects_flex scrollFade">
-            <h1>Some Things I've made</h1>
+            <h1 class="projectT">Some Things I've made</h1>
             <div class="pro_btns">
                 <div class="btns d-flex justify-content-around">
                     <button class="btnlinks" onclick="openPro(event, 'P1')" id="defaultOpenb">P1</button>
@@ -264,20 +297,29 @@
         <div class="chatflex">
             <h1 class="text-center">Let's Chat</h1>
             <div class="talk">
-                <p>Please feel free to fill out the form below to reach out to me with and questions and/or inquiries. </p>
+                <p>Please feel free to fill out the form below to reach out to me with and questions and/or inquiries.
+                </p>
                 <p>I would love to answer your questions or find a time to set up a meeting!</p>
             </div>
         </div>
         <form class="gform d-flex flex-column align-items-baseline" method="POST" data-email="example@email.net"
             action="https://script.google.com/macros/s/AKfycbwI3Zc227VZEZmNN3oDKo7TKNmVdY8rpjW2y0RPcMYFkMmmWtiFi_plbrJA4UgBxHCM/exec">
-            <label for="name">Name:</label>
-            <input name="name" id="name" type="text">
-            <label for="e-mail">E-mail:</label>
-            <input name="email" id="e-mail" type="text">
-            <label for="message">Message:</label>
-            <div class="d-flex flex-column align-items-end">
-                <textarea name="message" id="message" rows="10" cols="50"></textarea>
-                <input onclick="alert('Thanks! I will contact you soon!')" id="submit" type="submit" value="Send">
+            <div>
+                <label for="name">Name:</label>
+                <br>
+                <input name="name" id="name" type="text">
+            </div>
+            <div>
+                <label for="e-mail">E-mail:</label>
+                <br>
+                <input name="email" id="e-mail" type="text">
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <div class="d-flex flex-column align-items-end">
+                    <textarea name="message" id="message" rows="10" cols="50"></textarea>
+                    <input onclick="alert('Thanks! I will contact you soon!')" id="submit" type="submit" value="Send">
+                </div>
             </div>
         </form>
     </div>
@@ -298,6 +340,9 @@
 
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

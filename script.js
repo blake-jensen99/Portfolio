@@ -5,6 +5,9 @@ function toggleDark() {
     var element = document.querySelector("#nav");
     element.classList.toggle("dark_nav");
 
+    var element = document.querySelector("#mobNav1");
+    element.classList.toggle("dark_nav");
+
     var element = document.querySelectorAll("button");
     for (var i = 0; i < element.length; i++) {
         element[i].classList.toggle("dark_btn");
@@ -264,7 +267,13 @@ function scrollFade() {
 
 		var elementFourth = rect.height/4;
 		var fadeInPoint = window.innerHeight - elementFourth;
-		var fadeOutPoint = -(rect.height/2);
+        if (screen.width < 600) {
+            var fadeOutPoint = -(rect.height)
+        }
+        else {
+            var fadeOutPoint = -(rect.height/2);
+        }
+		
 
 		if (rect.top <= fadeInPoint) {
 			element.classList.add('scrollFade--visible');

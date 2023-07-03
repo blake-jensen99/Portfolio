@@ -29,8 +29,8 @@
 
 
 .dark_mode {
-    color: #DDDDDD;
-    background-color: #0A192F;
+    color: #DDDDDD !important;
+    background-color: rgb(31, 30, 30);
 }
 
 .dark_project {
@@ -39,8 +39,8 @@
 }
 
 .dark_nav {
-    background-color: rgb(31, 30, 30);
-    color: rgb(75, 75, 75);
+    background-color: rgb(31, 30, 30) !important;
+    color: rgb(255, 255, 255);
 }
 
 .dark_btn {
@@ -51,7 +51,7 @@
 
 
 body {
-    background-color: #f5f2e4;
+    background-color: #DDDDDD;
     color: #0C343D;
     height: 100%;
 }
@@ -65,6 +65,15 @@ nav {
     position: sticky;
     z-index: 1;
     top: 0px;
+}
+.mobile {display: none;}
+
+.mobNav{
+    background-color: #DDDDDD;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+
 }
 
 .navL {
@@ -179,6 +188,10 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.test {
+    z-index: -1;
 }
 
 /* NAV */
@@ -319,7 +332,7 @@ input:checked+.slider:before {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 50%;
-    height: 300px;
+    height: 330px;
 }
 
 
@@ -352,7 +365,7 @@ input:checked+.slider:before {
     border: 1px solid #707070;
     width: 50%;
     border-left: none;
-    height: 300px;
+    height: 330px;
     display: none;
 }
 
@@ -362,8 +375,8 @@ input:checked+.slider:before {
     float: left;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 30%;
-    height: 300px;
+    width: 50%;
+    height: 330px;
 }
 
 
@@ -394,9 +407,9 @@ input:checked+.slider:before {
     float: left;
     padding: 0px 12px;
     border: 1px solid #707070;
-    width: 70%;
+    width: 50%;
     border-left: none;
-    height: 300px;
+    height: 330px;
     display: none;
 }
 
@@ -598,3 +611,155 @@ textarea {
 }
 
 /* CONTACT */
+
+/* Mobile */
+
+@media only screen and (max-width: 900px) {
+    /* nav */
+   #nav {
+    display: none !important;
+  }
+
+  .mobile {display: inherit;}
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    color: white !important;
+  }
+
+  /* nav */
+
+  /* home */
+
+  #home {
+    width: 100%;
+    margin-bottom: 500px;
+  }
+
+  .self {
+    display: none;
+  }
+
+  .home_top {
+    gap: 0px;
+    display: block;
+  }
+
+  .home_name {
+    font-size: 42pt;
+    margin-top: 10px;
+  }
+
+  .home_flex, .home_flexdark {
+    padding: 0px;
+    border: none !important;
+    text-align: center;
+  }
+  .home_flex {
+    position: static;
+    z-index: 1;
+  }
+
+  .home_top {
+    margin: 20px;
+  }
+
+  /* home */
+
+  /* about */
+
+  #about {
+    margin-bottom: 300px;
+  }
+
+  .about_top {
+    flex-direction: column;
+  }
+
+  .about_flex {
+    position: static;
+    z-index: 1;
+    margin: 10px;
+  }
+
+  .about_bottom {
+    margin-bottom: 500px;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+
+  #about {
+    margin-top: 200px;
+  }
+
+  .vtab, .vtabcontent {
+    height: 400px;
+  }
+
+  .vtab2, .vtabcontent2 {
+    height: 510px;
+  }
+
+  .htab {
+    display: flex;
+  }
+  .htab button {
+    flex: 1;
+  }
+
+  /* about */
+
+/* projects */
+
+.projects_flex {
+    position: static;
+    z-index: 1;
+    margin: 10px !important;
+    width: 100%;
+  }
+
+  .pR {
+    display: none !important;
+  }
+
+/* projects */
+
+/* contact */
+
+.chatflex {
+    position: static;
+    z-index: 1;
+    margin: 10px;
+  }
+
+form {
+    position: static;
+    z-index: 1;
+    margin: 10px;
+  }
+
+textarea, #name, #email {
+    width: 100%;
+}
+
+.gform {
+    justify-content: center !important;
+}
+
+.about_title {
+    font-size: 20px;
+}
+.projectT {
+    font-size: 20px !important;
+}
+
+#sea {
+    width:unset;
+}
+
+}
+
+
+/* Mobile */
