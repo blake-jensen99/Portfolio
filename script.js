@@ -296,3 +296,13 @@ window.addEventListener('resize', scrollFade);
 document.addEventListener('DOMContentLoaded', function() {
     scrollFade();
 });
+
+
+function beatGit(id) {
+    element = document.getElementById(id)
+    element.classList.add("fa-beat-fade")
+}
+function stopGit(id) {
+    element = document.getElementById(id)
+    element.classList.remove("fa-beat-fade")
+}
