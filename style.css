@@ -364,7 +364,7 @@ input:checked+.slider:before {
     padding: 0px 12px;
     border: 1px solid #707070;
     width: 50%;
-    border-left: none;
+    /* border-left: none; */
     height: 425px;
     display: none;
 }
@@ -408,7 +408,7 @@ input:checked+.slider:before {
     padding: 0px 12px;
     border: 1px solid #707070;
     width: 50%;
-    border-left: none;
+    /*border-left: none; */
     height: 425px;
     display: none;
 }
@@ -705,11 +705,12 @@ textarea {
   }
 
   .vtab, .vtabcontent {
-    height: 550px;
+    height: 100%;
   }
 
+
   .vtab2, .vtabcontent2 {
-    height: 550px;
+    height: 100%;
   }
 
   .htab {
